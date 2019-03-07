@@ -1,5 +1,5 @@
 #
-# system.prop for Lenovo K8 Plus
+# system.prop for DOOGEE MIX
 #
 
 rild.libpath=mtk-ril.so
