@@ -1,3 +1,0 @@
-type gx_fpd, domain;
-type gx_fpd_exec, exec_type, file_type;
-
