@@ -23,7 +23,7 @@ LOCAL_PATH := device/doogee/mix
 #######################################################################
 
 #Jack
-ANDROID_COMPILE_WITH_JACK := false 
+ANDROID_COMPILE_WITH_JACK := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6757
