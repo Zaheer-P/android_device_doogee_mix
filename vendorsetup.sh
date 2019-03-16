@@ -24,27 +24,37 @@ for var in eng user userdebug; do
   add_lunch_combo lineage_mix-$var
 done
 
+#!/bin/sh
+cd bionic
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/bionic.patch
+patch -p1 < bionic.patch
+
+cd .. && cd external/wpa_supplicant_8/
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/external_nvram.patch
+patch -p1 < external_nvram.patch
+cd .. && cd ..
+
 cd frameworks/av
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0001-frameworks_av.patch
-cd ../..
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/frameworks_av_audioflinger.patch
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/frameworks_av_camera.patch
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/frameworks_av_libmedia.patch
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/frameworks_av_mediaprofile.patch
+patch -p1 < frameworks_av_audioflinger.patch
+patch -p1 < frameworks_av_camera.patch
+patch -p1 < frameworks_av_libmedia.patch
+patch -p1 < frameworks_av_mediaprofile.patch
+cd ..
 
-cd frameworks/base
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0002-frameworks_base.patch
-cd ../..
-
-cd frameworks/native
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0003-frameworks_native.patch
-cd ../..
-
-cd system/netd
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0004-system_netd.patch
-cd ../..
+cd native
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/frameworks_native_ui.patch
+patch -p1 < frameworks_native_ui.patch
+cd .. && cd ..
 
 cd system/core
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0005-system_core.patch
-cd ../..
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/system_core.patch
+patch -p1 < system_core.patch
+cd ..
+
+cd netd
+wget https://github.com/PainKiller3/patches_Mtk/raw/master/system_netd.patch
+patch -p1 < system_netd.patch
