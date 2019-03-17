@@ -24,27 +24,19 @@ for var in eng user userdebug; do
   add_lunch_combo lineage_mix-$var
 done
 
+# Auto Patches
 cd frameworks/av
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0001-frameworks_av.patch
+git apply -v ../../device/doogee/mix/patches/frameworks_av.patch
 cd ../..
-
 cd frameworks/base
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0002-frameworks_base.patch
+git apply -v ../../device/doogee/mix/patches/frameworks_base.patch
 cd ../..
-
-cd frameworks/native
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0003-frameworks_native.patch
-cd ../..
-
 cd system/netd
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0004-system_netd.patch
+git apply -v ../../device/doogee/mix/patches/system_netd.patch
 cd ../..
-
 cd system/core
-sudo git reset --hard && sudo git clean -f -d
-sudo git apply -v ../../device/doogee/mix/patches/0005-system_core.patch
+git apply -v ../../device/doogee/mix/patches/system_core.patch
+cd ../..
+cd frameworks/native
+git apply -v ../../device/doogee/mix/patches/frameworks_native.patch
 cd ../..
