@@ -171,17 +171,8 @@ PRODUCT_PACKAGES += \
    libmtk_symbols \
    libccci_util
 
-# Mtk symbols & shim
-PRODUCT_PACKAGES += \
-    libshim_asc \
-    libshim_audio \
-    libshim_audioCompat \
-    libshim_cam \
-    libshim_fence \
-    libshim_gui \
-    libshim_parcel \
-	libshim_ui \
-	libshim_program_binary_builder
+
+
 
 # Lights
 PRODUCT_PACKAGES += \
