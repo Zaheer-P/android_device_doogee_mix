@@ -24,19 +24,4 @@ for var in eng user userdebug; do
   add_lunch_combo lineage_mix-$var
 done
 
-# Auto Patches
-cd frameworks/av
-git apply -v ../../device/doogee/mix/patches/frameworks_av.patch
-cd ../..
-cd frameworks/base
-git apply -v ../../device/doogee/mix/patches/frameworks_base.patch
-cd ../..
-cd system/netd
-git apply -v ../../device/doogee/mix/patches/system_netd.patch
-cd ../..
-cd system/core
-git apply -v ../../device/doogee/mix/patches/system_core.patch
-cd ../..
-cd frameworks/native
-git apply -v ../../device/doogee/mix/patches/frameworks_native.patch
-cd ../..
+# Auto Patches-removed
