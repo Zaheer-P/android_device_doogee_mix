@@ -25,3 +25,7 @@ for var in eng user userdebug; do
 done
 
 # Auto Patches-removed
+
+
+#Ship with root access
+export WITH_SU=true
