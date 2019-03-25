@@ -24,12 +24,6 @@ for var in eng user userdebug; do
   add_lunch_combo lineage_mix-$var
 done
 
-
-
-
-#Ship with root access
-export WITH_SU=true
-
 #!/bin/bash
 cd ../../../..
 cd system/core
