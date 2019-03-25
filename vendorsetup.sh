@@ -25,7 +25,7 @@ for var in eng user userdebug; do
 done
 
 #!/bin/bash
-cd ../../../..
+
 cd system/core
 git apply -v ../../device/doogee/mix/patches_mtk/system_core.patch
 cd ../..
