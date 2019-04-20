@@ -171,8 +171,8 @@ PRODUCT_PACKAGES += \
    libmtk_symbols \
    libccci_util
 
-#libmtk_symbols
-libmtk_symbols
+
+
 
 # Lights
 PRODUCT_PACKAGES += \
