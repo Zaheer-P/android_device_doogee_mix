@@ -1,7 +1,8 @@
 # lineage os 14.1 for doogee mix
 #LINEAGE OS DEVICE TREE FOR DOOGEE MIX
 # Doogee Mix - CM14.1
-==============
+Thanks to @hyperion70 @jmpfbmx @lalitjosh06
+=============
 
 # About Device
 
